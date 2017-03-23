@@ -1,0 +1,19 @@
+{
+    "name": "januszhou/emagid-ftp",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Janus",
+            "email": "janus.zhou1005@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "nicolab/php-ftp-client": "^1.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "EmagidService": "src/"
+        }
+    }
+}
