@@ -8,6 +8,8 @@
 
 namespace EmagidService;
 
+use FtpClient\FtpClient;
+
 class FTPBuilder {
     public $ftp;
     private $host;
@@ -19,7 +21,7 @@ class FTPBuilder {
 
     public function __construct()
     {
-        $this->ftp = new \FtpClient\FtpClient();
+        $this->ftp = new FtpClient();
     }
 
     public function setHost($host)
@@ -66,6 +68,8 @@ class FTPBuilder {
         }
 
         $this->ftp->login($this->account, $this->password);
+
+        $this->ftp->pasv(true);
 
         return new FTP($this);
     }
