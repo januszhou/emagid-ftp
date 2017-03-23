@@ -13,7 +13,12 @@ namespace EmagidService;
  * Class FTP
  * @package EmagidService
  * @Example
- * (new EmagidService\FTPBuilder());
+ * (new FTPBuilder())->setHost('xx.xx.xx.xxx')
+ * ->setAccount('xxxx')
+ * ->setPassword(' xxxx')
+ * ->setUploadPath('/outbox')
+ * ->build()
+ * ->upload($file);
  */
 class FTP
 {
